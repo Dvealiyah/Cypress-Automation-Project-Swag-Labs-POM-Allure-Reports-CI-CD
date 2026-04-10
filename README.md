@@ -2,9 +2,9 @@
 ![GitHub Actions](https://img.shields.io/badge/CI-GitHub%20Actions-blue)
 ![JavaScript](https://img.shields.io/badge/language-JavaScript-yellow)
 
-# 🧪 Cypress Swag Labs Test Automation
+# 🧪 Cypress Swag Labs Test Automation Project
 
-Automated end-to-end testing project using Cypress for the Swag Labs demo application.
+Automated end-to-end testing project using Cypress for the Swag Labs demo application, implementing POM, CI/CD, and Allure reporting.
 
 ⸻
 
@@ -16,6 +16,15 @@ This project includes automated UI tests for the Swag Labs website using:
  • GitHub Actions (CI/CD)
  • Allure Reports
  • Video recording on test failure 🎥
+
+⸻
+## 📌 Highlights
+
+- Automated UI testing using Cypress  
+- Implemented Page Object Model (POM)  
+- Integrated Allure Reports with test evidence  
+- CI/CD pipeline using GitHub Actions  
+- Linked manual test cases with automation (TC01–TC05)
 
 ⸻
 
@@ -58,22 +67,34 @@ npx allure open
 ## 📊 Allure Report Preview
 
 ![Allure Report](https://raw.githubusercontent.com/dvealiyah/cypress-swaglabs-tests/main/allure-report.png)
-## 🌐 Live Report
+## 🌐 Live Allure Report
 
-[View Allure Report](https://dvealiyah.github.io/cypress-swaglabs-tests/allure-report/)
-🎥 Test Evidence
+🔗 [Click here to view report](https://dvealiyah.github.io/cypress-swaglabs-tests/allure-report/)
+
+⸻
+
+## 🎥 Test Evidence
+
  • Videos are automatically recorded when tests fail
  • Videos are attached inside Allure reports
 
 ⸻
 
-⚙️ CI/CD
+## ⚙️ CI/CD
 
 Tests run automatically using GitHub Actions on every push.
 
 ⸻
 
-✅ Test Scenarios
+## 📝 Test Cases
+
+Manual test cases are documented here:
+
+📄 [Download Test Cases](./test-cases/swaglabs-test-cases.xlsx)
+
+⸻ 
+
+## ✅ Test Scenarios
  • Login with valid credentials
  • Login with invalid credentials
  • Add product to cart
