@@ -1,22 +1,14 @@
-const { defineConfig } = require("cypress");
-
 module.exports = defineConfig({
-  allowCypressEnv: false,
-
   e2e: {
-     video: true, 
-     screenshotOnRunFailure: true,
-
-    reporter: 'mochawesome',
-    reporterOptions: {
-      reportDir: 'cypress/reports',
-      overwrite: false,
-      html: true,
-      json: true
-    },
+    video: true,   // 👈 هنا
 
     setupNodeEvents(on, config) {
+      allureWriter(on, config);
+      return config;
     },
-  },
+
+    env: {
+      allure: true
+    }
+  }
 });
-  
