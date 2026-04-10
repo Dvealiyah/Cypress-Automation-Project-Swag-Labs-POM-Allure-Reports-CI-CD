@@ -19,7 +19,6 @@ describe('Swag Labs Tests', () => {
   })
 
   it('Add product to cart', () => {
-
     cy.allure().feature('Cart');
     cy.allure().severity('normal');
 
@@ -31,7 +30,6 @@ describe('Swag Labs Tests', () => {
   })
 
   it('Remove product from cart', () => {
-
     cy.allure().feature('Cart');
     cy.allure().severity('normal');
 
@@ -43,7 +41,6 @@ describe('Swag Labs Tests', () => {
   })
 
   it('Verify products are displayed', () => {
-
     cy.allure().feature('Products');
     cy.allure().severity('minor');
 
@@ -52,7 +49,6 @@ describe('Swag Labs Tests', () => {
   })
 
   it('Login with wrong password', () => {
-
     cy.allure().feature('Login');
     cy.allure().severity('critical');
 
@@ -67,7 +63,6 @@ describe('Swag Labs Tests', () => {
   })
 
   it('Complete checkout process', () => {
-
     cy.allure().feature('Checkout');
     cy.allure().severity('critical');
 
