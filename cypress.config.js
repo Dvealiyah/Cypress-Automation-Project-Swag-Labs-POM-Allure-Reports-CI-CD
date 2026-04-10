@@ -1,12 +1,31 @@
-const { defineConfig } = require('cypress');
+name: Cypress Tests
 
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+on:
+push:
+  branches: [ main ]
 
-module.exports = defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      allureWriter(on, config);
-      return config;
-    },
-  },
-});
+permissions:
+contents: write   # 🔥 هذا أهم سطر (بدونه يطلع 403)
+
+jobs:
+cypress-run:
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run Cypress tests
+      uses: cypress-io/github-action@v6
+
+    - name: Install Allure
+      run: npm install -g allure-commandline
+
+    - name: Generate Allure Report
+      run: allure generate allure-results --clean -o allure-report
+
+    - name: Deploy Allure Report
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: allure-report
