@@ -14,14 +14,5 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-afterEach(function () {
-  if (this.currentTest.state === 'failed') {
-    const videoPath = cypress/videos/${Cypress.spec.name}.mp4;
-
-    cy.allure().attachment(
-      'Test Video',
-      videoPath,
-      'video/mp4'
-    );
-  }
-});
+import '@shelex/cypress-allure-plugin';
+    
